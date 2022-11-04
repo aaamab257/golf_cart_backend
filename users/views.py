@@ -34,8 +34,6 @@ class UserRegistrationView(APIView):
 
 class UserLoginView(APIView):
     renderer_classes = [UserRenderer]
-    
-    @csrf_protect
     def post(self, request, format=None):
       serializer = UserLoginSerializer(data=request.data)
       serializer.is_valid(raise_exception=True)
