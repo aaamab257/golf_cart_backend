@@ -14,8 +14,7 @@ from pathlib import Path
 import os
 import dj_database_url
 from datetime import timedelta
-import django_heroku
-from decouple import config
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,9 +26,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-0=un+5h4^wqq*6#i_dydto$8uiwbd1@vl$c=#5o8p(o8*)rr=e'
-
-
-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -170,7 +166,7 @@ JAZZMIN_SETTINGS = {
     "site_brand": "Golf Cart",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
-    "site_logo": "staticfiles/jazzmin/img/logo.jpg",
+    "site_logo": "static/users/img/logo.jpg",
 
     # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
     "login_logo": None,
