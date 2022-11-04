@@ -44,7 +44,7 @@ class UserLoginView(APIView):
         token = get_tokens_for_user(user)
         json_str = json.dumps({user.date_of_birth}, default=str)
         return Response({'code':status.HTTP_200_OK ,'token':token, 'msg':'Login Success' ,
-        'user':{'is_admin':user.is_admin , 'birthdate':user.date_of_birth}})
+        'user':{'is_admin':user.is_admin , 'is_driver':user.is_driver , 'birthdate':user.date_of_birth}})
       else:
         return Response({'errors':{'non_field_errors':['Email or Password is not Valid']}}, status=status.HTTP_404_NOT_FOUND)
 
