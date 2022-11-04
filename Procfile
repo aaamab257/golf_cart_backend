@@ -1,1 +1,1 @@
-web: gunicorn src.wsgi.aplication --log-file -
+web: gunicorn app:app
