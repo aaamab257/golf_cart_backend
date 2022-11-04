@@ -133,10 +133,12 @@ USE_TZ = True
 
 
 
+MEDIA_URL = ''
+MEDIA_ROOT = ''
+
 STATIC_URL = '/static/'
 
-STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
-
+STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
@@ -163,7 +165,7 @@ JAZZMIN_SETTINGS = {
     "site_brand": "Golf Cart",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
-    "site_logo": "users/img/logo.jpg",
+    "site_logo": "static/users/img/logo.jpg",
 
     # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
     "login_logo": None,
