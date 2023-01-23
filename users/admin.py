@@ -11,11 +11,11 @@ class UserModelAdmin(BaseUserAdmin):
     # These override the definitions on the base UserAdmin
     # that reference specific fields on auth.User.
     list_display = ('id' , 'name' , 'email', 'date_of_birth', 'is_admin','is_active','is_driver')
-    list_filter = ('is_admin','is_driver')
+    list_filter = ('is_driver',)
     fieldsets = (
         ('User Credentials', {'fields': ('email', 'password')}),
         ('Personal info', {'fields': ('name','date_of_birth','phone_number')}),
-        ('Permissions', {'fields': ('is_admin','is_driver')}),
+        ('Permissions', {'fields': ('is_driver',)}),
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
     # overrides get_fieldsets to use this attribute when creating a user.
